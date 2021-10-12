@@ -1,0 +1,602 @@
+body{
+    color: #EDF2F4;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #D90429;
+    display: grid;
+    grid-template-columns: 0fr 1fr 0fr ;
+    grid-template-rows: 45px 80px 1fr 0fr;
+    grid-template-areas: 
+        ". header ."
+        ". menu ."
+        ". main ."
+        ". footer .";
+}
+h1{
+    font-size: 40pt;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    font-size: 30pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+button{
+    background-color: #D90429; 
+    color: white;
+    border-radius: 25px;
+    border: 0px;
+    margin: 100px 45px;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18pt;
+    font-weight: bold;
+}
+button:hover {
+    color: #D90429;
+    background-color: white; 
+    border:2px solid #D90429 ;
+    text-decoration: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.active {
+    background-color: #D90429;
+    font-weight: bold;
+}
+header{
+    grid-area: header;
+}
+header h1{
+    font-size: 15pt;
+    text-align: center;
+    font-weight: normal;
+}
+nav{
+    background-color:#383637;
+    display: flex; 
+    padding: 15px 50px;
+    grid-area: menu;
+}
+nav img{
+    height: 100%;
+}
+nav ul {
+    text-decoration: none;
+    list-style-type:none;
+    margin-left: 150px;
+}
+nav li {
+    display: inline;
+}
+nav li a{
+    padding: 33px;
+}
+nav a:hover {
+    background-color: #D90429;
+}
+main{
+    display: grid;  
+    grid-template-columns:1fr; 
+    grid-template-rows: 1080px 1fr 1fr 0fr; 
+    grid-template-areas: 
+        "Headerfoto "
+        "About"
+        "CTA";  
+    grid-area: main;
+}
+.headerfoto {
+    grid-area: Headerfoto;
+    background-image: url(../img/HEADER\ IMAGE.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.headerfotoovermij{
+    grid-area: Headerfoto;
+    background-image: url(../img/PF1.png);
+    background-size: cover;
+}
+.box {
+    color:#D90429;
+    font-size: 15pt;
+    text-shadow: 5px 5px 10px white;
+    padding: 300px 500px;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+#prijzen {
+    display: grid; 
+    grid-template-columns: 25px 1fr 25px 1fr 25px 1fr 25px; 
+    grid-template-rows: 50px 1fr 25px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". t t t t t ."
+        ". b1 . b2 . b3 ."
+        ". . . . . . ."; 
+    grid-area: About;
+    background-color: #D90429;
+    align-items: center;
+    justify-items: center;
+}
+.headertekst{
+    grid-area: t;
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px 25px;
+}
+.prijsbox1 {
+    grid-area: b1;
+    background-color: white;
+    color:#D90429 ;
+    padding: 10px 20px;
+    margin: 15px;
+    height: 500px;
+    width: 350px;
+    border-radius: 25px;
+}
+#prijzen h1{
+    margin: 10px;
+    text-align: center;
+}
+#prijzen h4{
+    text-align: center;
+    font-size: 18pt;
+    margin-top: 5px;
+}
+#prijzen p{
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+}
+#prijzen button{
+    margin-left:65px; 
+}
+.prijsbox2 {
+    grid-area: b2;
+    background-color: white;
+    color:#D90429 ;
+    padding: 10px 20px;
+    margin: 15px;
+    height: 500px;
+    width: 350px;
+    border-radius: 25px;
+}
+.prijsbox3 {
+    grid-area: b3;
+    background-color: white;
+    color:#D90429 ;
+    padding: 10px 20px;
+    margin: 15px;
+    height: 500px;
+    width: 350px;
+    border-radius: 25px;
+}
+.werkt {
+    grid-area: CTA;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas:
+        "h1 h1 h1"
+        "Stap1 Stap2 Stap3"; 
+    background-color:white;
+    color: #383637;
+    border-bottom:5px solid #383637 ;
+}
+.werkt h1{
+    grid-area: h1;
+}
+.werkt p{
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+   
+}
+.stap1{
+    grid-area: Stap1; 
+}
+.stap2{
+    grid-area: Stap2;
+}  
+.stap3{
+    grid-area: Stap3;
+}
+.overmij {
+    background-color:#383637 ;
+    padding: 0px 800px;
+    text-align: center;
+}
+.CTA {
+    background-color:#383637 ;
+}
+.CTA button{
+    margin-left: 1000px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #D90429;
+    text-align: center;
+}
+footer form {
+    color:white ;
+    border-radius: 10px;
+}
+footer input{
+    border-radius: 15px;
+    width: 300px;
+    height: 20px;
+    border: 0px;
+}
+footer textarea{
+    border-radius: 5px;
+    width: 300px;
+    height: 250px;
+    border:0px
+}
+@media ( min-width: 375px ) { 
+    body { 
+        background-color: #D90429;
+    }
+    h1{
+        font-size: 35pt;
+    }
+    h2{
+        font-size: 25pt;
+    }
+    button{
+        font-size: 10pt;
+    }
+    button:hover {
+        font-size: 10pt;
+    }
+    header h1{
+        font-size: 12pt;
+        min-width: 375px;
+    }
+    nav{
+        min-width:375px;
+        display: inline-block;
+        font-size: 8pt;
+    }
+    nav img{
+        height: 35%;
+    }
+    nav ul {
+        margin-left: 55px;
+    }
+    nav li a{
+        padding:15px;
+    }
+    main{
+        grid-template-rows: 390px 1fr 0fr; 
+        grid-template-columns: 1fr; 
+    }
+    .headerfoto{
+        min-width: 375px;
+        max-height: 390px;
+    }
+    .box {
+        padding: 30px 50px;
+        display: flex ;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .box h1{
+        font-size: 15pt;
+    }
+    #prijzen {
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: 50px 1fr 1fr 1fr 0fr ; 
+        grid-template-areas: 
+            ". t ."
+            ". b1 ."
+            ". b2 ."
+            ". b3 ."; 
+    }
+    #prijzen h1{
+        font-size: 40pt;
+    }
+    #prijzen h4{
+        font-size: 18pt;
+    }
+    #prijzen p{
+        font-size: 15pt;
+    }
+    #prijzen button{
+        margin-left:50px;
+        font-size: 15pt; 
+    }
+    .prijsbox1 {
+        height: 400px;
+        width: 350px;
+    }
+    .prijsbox2 {
+        height: 400px;
+        width: 350px;
+    }
+    .prijsbox3 {
+        height: 400px;
+        width: 350px;
+    }
+    .werkt {
+        grid-template-columns: 1fr;  
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        grid-template-areas:
+            "h1 h1 h1"
+            ". Stap1 ."
+            ". Stap2 ."
+            ". Stap3 ."; 
+    }
+    .werkt h1{
+        grid-area: h1;  
+    }
+    .werkt p{
+        font-size: 18pt;
+        text-align: center;
+        font-weight: bold;     
+    }
+    .stap1{
+        grid-area: Stap1;
+        border-bottom:3px solid #383637 ; 
+    }
+    .stap2{
+        grid-area: Stap2;
+        border-bottom:3px solid #383637 ;
+    }  
+    .stap3{
+        grid-area: Stap3;
+    }
+    .overmij {
+        background-color:#383637 ;
+        padding: 0px 800px;
+        text-align: center;
+    }
+    .CTA {
+        background-color:#383637 ;
+    }
+    .CTA button{
+        margin-left: 1000px;
+    }
+    footer input{
+        border-radius: 10px;
+        width: 150px;
+        height: 20px;
+        border: 0px;
+    }
+    footer textarea{
+        border-radius: 5px;
+        width: 250px;
+        height: 100px;
+        border:0px
+    }
+}
+@media ( min-width: 1024px ) { 
+    body { 
+        background-color: #D90429;
+        grid-template-rows: 45px 50px 1fr 0fr;
+    }
+    h1{
+        font-size: 45pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    h2{
+        font-size: 35pt;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    button{
+        font-size: 20pt;
+    }
+    button:hover {
+        font-size: 20pt;
+    }
+    header h1{
+        font-size: 15pt;
+        min-width: 1024px;
+    }
+    nav{
+        min-width:1024px;
+        display: flex;
+        font-size: 12pt;
+    }
+    nav img{
+        height: 120%;
+    }
+    nav ul {
+        margin-left: 55px;
+    }
+    nav li a{
+        padding:30px;
+    }
+    main{
+        grid-template-rows: 900px 1fr 0fr; 
+        grid-template-columns: 1fr; 
+    }
+    .headerfoto{
+        min-width: 1024px;
+        max-height: 900px;
+    }
+    .box {
+        padding: 30px 50px;
+        display: flex ;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 150px;
+    }
+    .box h1{
+        font-size: 25pt;
+    }
+    #prijzen {
+        grid-template-columns: 0px 1fr 0px 1fr 0px 1fr 0px; 
+        grid-template-rows: 50px 1fr 25px; 
+        grid-template-areas: 
+            ". t t t t t ."
+            ". b1 . b2 . b3 ."
+            ". . . . . . ."; 
+    }
+    .headertekst{
+        margin: 0px;
+    }
+    #prijzen h4{
+        text-align: center;
+        font-size: 18pt;
+        margin-top: 5px;
+    }
+    #prijzen p{
+        font-size: 15pt;
+        font-weight: bold;
+        text-align: center;
+    }
+    #prijzen button{
+        font-size: 15pt; 
+    }
+    .prijsbox1 {
+        height: 400px;
+        width: 330px;
+    }
+    .prijsbox2 {
+        height: 400px;
+        width: 330px;
+    }
+    .prijsbox3 {
+        height: 400px;
+        width: 330px;
+    }
+    .werkt {
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "h1 h1 h1"
+            "Stap1 Stap2 Stap3"; 
+        border-bottom:5px solid #383637 ;
+    }
+    .werkt h1{
+        grid-area: h1;  
+    }
+    .werkt p{
+        font-size: 18pt;
+        text-align: center;
+        font-weight: bold;      
+    }
+    .stap1{
+        grid-area: Stap1;
+        border-bottom: 0px solid;  
+    }
+    .stap2{
+        grid-area: Stap2;
+        border-bottom: 0px solid;  
+    }  
+    .stap3{
+        grid-area: Stap3;
+    }
+    footer input{
+        border-radius: 10px;
+        width: 250px;
+        height: 25px;
+        border: 0px;
+    }
+    footer textarea{
+        border-radius: 5px;
+        width: 250px;
+        height: 100px;
+        border:0px
+    }
+}
+@media ( min-width: 1280px ) { 
+    body{
+        grid-template-columns: 0fr 1fr 0fr ;
+        grid-template-rows: 45px 80px 1fr 0fr;
+    }
+    h1{
+        font-size: 40pt;
+    }
+    h2{
+        font-size: 30pt;
+    }
+    button{
+        font-size: 18pt;
+    }
+    header h1{
+        font-size: 15pt;
+    }
+    nav img{
+        height: 100%;
+    }
+    nav ul {
+        margin-left: 150px;
+    }
+    nav li a{
+        padding: 33px;
+    }
+    main{
+        grid-template-rows: 1080px 1fr 1fr 0fr; 
+    }
+    .box {
+        justify-content: center;
+    }
+    #prijzen {
+        grid-template-columns: 0px 1fr 0px 1fr 0px 1fr 0px; 
+        grid-template-rows: 50px 1fr 25px; 
+        grid-template-areas: 
+            ". t t t t t ."
+            ". b1 . b2 . b3 ."
+            ". . . . . . ."; 
+    }
+    .prijsbox1 {
+        height: 500px;
+        width: 350px;
+    }  
+    #prijzen button{
+        margin-left:65px; 
+    }
+    .prijsbox2 {
+        height: 500px;
+        width: 350px;
+    }
+    .prijsbox3 {
+        height: 500px;
+        width: 350px;
+    }
+    .werkt {
+        border-bottom:10px solid #383637 ;
+    }
+    .werkt p{
+        font-size: 18pt;  
+    }
+    .overmij {
+        padding: 0px 200px;
+        }
+    .CTA {
+        background-color:#383637 ;
+    }
+    .CTA button{
+        margin-left: 1000px;
+    }
+    footer {
+        grid-area: footer;
+        background-color: #D90429;
+        text-align: center;
+    }
+    footer form {
+        color:white ;
+        border-radius: 10px;
+    }
+    footer input{
+        border-radius: 15px;
+        width: 300px;
+        height: 30px;
+        border: 0px;
+    }
+    footer textarea{
+        border-radius: 5px;
+        width: 300px;
+        height: 250px;
+        border:0px
+    }
+}
